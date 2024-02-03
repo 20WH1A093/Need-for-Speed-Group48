@@ -1,0 +1,39 @@
+Question analysis
+▶ From the description of the project we could analyze that an
+old car of a student has its speedometer needle
+broken. However the student fixed it up again at the same
+point but with a different angle. So now the speed shown in
+the speedometer is less than the actual speed. We were
+supposed to find the difference between the actual speed and
+the speed that is being shown by the speedometer. This
+difference is the error "c".
+
+Input analysis:
+▶ From the given input description we get to know that at first
+we need to make the user input the number of segments ”n”
+and the total time taken for the journey ”t”. Then based on
+the number of segments there would be n other lines to take the
+input from the user regarding the distance travelled and the
+speed shown by the speedometer in that particular segment of
+journey.
+
+Sample input description:
+▶ Lets say the user gave 3 segments as input. So we will have 3
+other lines foe each segment of which each line has the
+distance travelled in that particular segment and the speed
+shown in the speedometer.
+Sample Input analysis:
+3 5
+4 4
+3 -1
+5 2
+So from the above we can observe that there were a total of 3
+segments and the total time taken for the journey is 5
+hours. In the next line of the input we have the distance
+travelled(4miles) and speed of the speedometer(4miles per
+hour) of the first segment followed by those of
+second(3miles,-1miles per hour) and third(5miles and 2miles
+per hour) segments. We could even notice that the speed in
+second segment input is negative that is because the speed
+shown on her speedometer is less than the actual
+speed. Whereas the actual speed is greater than the speedometer speed.

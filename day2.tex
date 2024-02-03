@@ -1,0 +1,64 @@
+\documentclass{beamer}															
+\title{Group 48 \\ NEED FOR SPEED}
+
+\subtitle{Day2}
+
+\date{\today}
+
+\author{ICPC World Finals 2017 \\ Problem E}
+
+\usefonttheme{structureitalicserif}
+
+\begin{document}
+    
+    \begin{frame}
+	    \titlepage
+    \end{frame}
+    
+    \begin{frame}
+	    \frametitle{Question analysis}
+
+	    \begin{itemize}
+	    	\item From the description of the project we could analyse that an old car of a student has its speedometer needle broken.However the student fixed it up again at the same point but with a different angle.So now the speed shown in the speedometer is less than the actual speed.We were supposed to find the difference between the actual speed and the speed that is being shown by the speedometer.This difference is the error "c". 
+	    \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+	    \frametitle{Input analysis}
+	    \begin{itemize}
+		\item From the given input description we get to know that at first we need to make the user input the number of segments "n" and the total time taken for the journey "t".Then based on the nuber of segments there would be n other lines to take the input from the user regarding the distance travelled and the speed shown by the speedometer in that particular segment of journey. 
+	    \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+	    \frametitle{Sample input description}
+	    \begin{itemize}
+	    	\item Lets say the user gave 3 segments as input.So we will have 3 other lines foe each segment of which each line has the distance travelled in that particular segment and the speed shown in the speedometer.\\Sample Input:\\3 5\\4 4\\3 -1\\5 2\\
+So from the above we can observe that there were a total of 3 segments and the total time taken for the journey is 5 hours.In the next line of the input we have the distance travelled(4miles) and speed of the speedometer(4miles per hour) of the first segment followed by those of second(3miles,-1miles per hour) and third(5miles and 2miles per hour) segments.We could even notice that the speed in seond segment input is negative that is because the speed shown on her speedometer is less than the actual speed.Whereas the actual speed is greater than the speedometer speed which is positive	    
+	    \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+	    \frametitle{Mathematical approach}
+	    \begin{enumerate}
+		\item number of segments = n , total time of journey = t
+		\item total distance = sum of distances travelled in each segment\\D = d1 + d2 + -- -- -- + dn
+		\item actual speed = total distance:total time\\S = D:t
+		\item time taken for each segment = distance travelled in that segment:speed shown in the speedometer of that segment\\t1 = d1:s1 ; t2 = d2:s2 ; tn = dn:sn
+		\item total time w.r.t speedometer T = t1 + t2 + -- -- -- + tn
+		\item average speed shown by the speedometer for the whole journey s = D:T
+		\item error c = S - s
+	    \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+	    \frametitle{Day 3 Agenda}
+	    \begin{enumerate}
+		\item We would try to figure out the correct algorithm to find the error based on our analysis.
+		\item Write a code to find the total distance from the segment distances.
+		\item to extract the total time with respect to the readings from speedometer and finally find the error.
+	    \end{enumerate}
+    \end{frame}
+
+\end{document}
+

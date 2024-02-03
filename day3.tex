@@ -1,0 +1,83 @@
+\documentclass{beamer}
+\title{Group 48 \\ NEED FOR SPEED}
+
+\subtitle{Day3}
+
+\date{\today}
+
+\author{ICPC World Finals 2017 \\ Problem E}
+
+\usefonttheme{structureitalicserif}
+\usepackage{graphicx}
+\begin{document}
+
+    \begin{frame}
+            \titlepage
+    \end{frame}
+    
+    \begin{frame}
+            \frametitle{Approach1}
+            \begin{enumerate}
+   		    \item number of segments = n , total time of journey = t
+		    \item total distance = sum of distances travelled in each segment\\D = d1 + d2 + -- -- -- + dn
+		    \item actual speed = total distance:total time\\S = D:t
+		    \item time taken for each segment = distance travelled in that segment:speed shown in the speedometer of that segment\\t1 = d1:s1 ; t2 = d2:s2 ; tn = dn:sn											    \item total time w.r.t speedometer T = t1 + t2 + -- -- -- + tn
+		    \item average speed shown by the speedometer for the whole journey s = D:T 			                            \item error c = S - s
+	    \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Approach 1 program}
+            \begin{itemize}
+		    \item screenshot of program
+			    \includegraphics{approach1}
+            \end{itemize}
+    \end{frame}
+	    
+    \begin{frame}
+	\frametitle{output}
+	\begin{itemize}
+		\item screenshot of output
+			\includegraphics{output1}
+	\end{itemize}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Approach 2}
+	    \begin{enumerate}
+                    \item number of segments = n , total time of journey = t
+	 	    \item total distance = sum of distances travelled in each segment\\D = d1 + d2 + -- -- -- + dn
+		    \item total distance = sum of speedometer readings shown in each segment\\s = s1 + s2 + -- -- -- + sn
+		    \item actual speed of segment = speedometer speed of that segment + error
+	 	    \item total speed of the journey S = s + n*c
+		    \item t = D:S = D:(s + n*c)
+		    \item n*c = (D:t) - s
+		    \item c = ((D:t) - s):n
+            \end{enumerate}
+    \end{frame}
+
+
+    \begin{frame}
+	    \frametitle{Approach 2 program}
+	    \begin{itemize}
+		    \item screenshot of program
+			    \includegraphics{approach2}
+    	    \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+	    \frametitle{Output}
+	    \begin{itemize}
+		    \item screenshot of output
+			    \includegraphics{output2}
+	    \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+	    \frametitle{Git Repo}
+	    \begin{itemize}
+		\item screenshot of repository
+			\includegraphics{gitrepo1}
+	    \end{itemize}
+    \end{frame}
+\end{document}
