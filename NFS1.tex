@@ -1,0 +1,141 @@
+\documentclass{beamer}
+\title{TEAM 48\\NEED FOR SPEED}
+
+\subtitle{ICPC World Finals 2017}
+
+\author{20WH1A05F2 - A.Varshitha(CSE-C)\\20WH1A0502 - M.Sunitha(CSE-A)\\20WH1A1293 - Sree Vally(IT)\\20WH1A0493 - K.Supritha(ECE)\\20WH1A6611 - D.Joanna Shalom(CSE-AIML)\\21WH5A0212 - Sri Bhargavi(EEE-LE)}
+
+\date{\today}
+
+\usefonttheme{structureitalicserif}
+\usepackage{graphicx}
+\begin{document}
+
+    \begin{frame}
+            \titlepage
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Question analysis}
+            \begin{itemize}
+                    \item From the description of the project we could analyse that an old car of a student has its speedometer needle broken.However the student fixed it up again at the same point but with a different angle.So now the speed shown in the speedometer is less than the actual speed.We were supposed to find the difference between the actual speed and the speed that is being shown by the speedometer.This difference is the error "c".
+            \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Approach 1 }
+            \begin{enumerate}
+                    \item number of segments = n , total time of journey = t
+                    \item total distance = sum of distances travelled in each segment\\D = d1 + d2 + -- -- -- + dn
+                    \item actual speed = total distance:total time\\S = D:t
+                    \item time taken for each segment = distance travelled in that segment:speed shown in the speedometer of that segment\\t1 = d1:s1 ; t2 = d2:s2 ; tn = dn:sn
+                    \item total time w.r.t speedometer T = t1 + t2 + -- -- -- tn
+                    \item average speed shown by the speedometer for the whole journey s = D:T                                              
+	     	    \item error c = S - s
+            \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+	 \frametitle{output}
+        \begin{itemize}
+                \item screenshot of output
+                        \includegraphics{output1}
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Approach 2}
+            \begin{enumerate}
+                    \item number of segments = n , total time of journey = t
+                    \item total distance = sum of distances travelled in each segment\\D = d1 + d2 + -- -- -- + dn
+                    \item total distance = sum of speedometer readings shown in each segment\\s = s1 + s2 + -- -- -- + sn
+                    \item actual speed of segment = speedometer speed of that segment + error
+                    \item total speed of the journey S = s + n*c
+                    \item t = D:S = D:(s + n*c)
+            \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Output}
+            \begin{itemize}
+                    \item screenshot of output
+                            \includegraphics{output2}
+            \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+	    \frametitle{Final Apprroach}
+	    \begin{enumerate}
+	    	    \item total time = sum of segment times
+	    	    \item t = t1 + t2 + – – – +tn
+	    	    \item t = d1/(s1 + c) + d2/(s2 + c) + – – – + dn/(sn + c)
+	    	    \item On solving the above equation by substituting t ,di and si values we get n roots of c.
+	    	    \item From this list of c values we need to pick the maximum output using binary search.
+	    \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Final program}
+            \begin{itemize}
+                \item Demo screenshot of final approach
+                        \includegraphics{final}
+            \end{itemize}
+    \end{frame}
+
+
+    \begin{frame}
+            \frametitle{Final Output}
+            \begin{itemize}
+                \item screenshot of final output
+                        \includegraphics{final_output}
+            \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Resources}
+            \begin{enumerate}
+	    	\item https://tanjim131.github.io/2020-05-27-uva-1753/
+	    	\item https://old-blog.patrickwu.uk/2018/11/30/ICPC-Finals-2017-Need-For-Speed/
+            \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Challenges}
+            \begin{itemize}
+            	    \item evaluating c using binary search is quiet complicated 
+	    	    \item we faced difficulty in figuring out the exact sample output of the question for the given input.
+            \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Learnings}
+            \begin{enumerate}
+                \item LATEX - installation and document writing or presentation using latex.
+		\item VCS - version control system - git
+		\item Finding error in speedometer mathematically and then developing an approach using binary search.
+            \end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Statistics}
+            \begin{itemize}
+                \item number of lines of code = 31
+                \item number of commits = 24
+            \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+            \frametitle{Git Repo}
+            \begin{itemize}
+                \item screenshot of repository
+			\includegraphics{gitrepo2}
+	    \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+	    \begin{center}
+		    \Huge THANK YOU!
+	    \end{center}
+    \end{frame}
+
+\end{document}
